@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - E-Commerce Component || Advent of JavaScript</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+
+<body>
+
+<div class="wrapper menu">
+    <div class="panel">
+        <h1>To Go Menu</h1>
+        <ul class="menu"></ul>
+    </div>
+
+    <div class="panel cart">
+        <h1>Your Cart</h1>
+
+        <ul class="cart-summary"></ul>
+    </div>
+</div>
+
+<template id="dish-item">
+    <li>
+        <div class="plate">
+            <img class="plate"/>
+        </div>
+        <div class="content">
+            <p class="menu-item"></p>
+            <p class="price"></p>
+        </div>
+    </li>
+</template>
+
+<template id="dish-add-button">
+    <button class="add">Add to Cart</button>
+</template>
+
+<template id="dish-in-cart-button">
+    <button class="in-cart">
+        <img src="images/check.svg" alt="Check"/>
+        In Cart
+    </button>
+</template>
+
+<template id="empty-cart">
+    <p class="empty">Your cart is empty.</p>
+</template>
+
+<template id="cart-list">
+    <ul class="cart-summary"></ul>
+</template>
+
+<template id="cart-item">
+    <li>
+        <div class="plate">
+            <img class="plate"/>
+            <div class="quantity"></div>
+        </div>
+        <div class="content">
+            <p class="menu-item"></p>
+            <p class="price"></p>
+        </div>
+        <div class="quantity__wrapper">
+            <button class="decrease">
+                <img src="images/chevron.svg"/>
+            </button>
+            <div class="quantity"></div>
+            <button class="increase">
+                <img src="images/chevron.svg"/>
+            </button>
+        </div>
+        <div class="subtotal"></div>
+    </li>
+</template>
+
+<template id="cart-totals">
+    <div class="totals">
+        <div class="line-item">
+            <div class="label">Subtotal:</div>
+            <div class="amount price subtotal"></div>
+        </div>
+        <div class="line-item">
+            <div class="label">Tax:</div>
+            <div class="amount price tax"></div>
+        </div>
+        <div class="line-item total">
+            <div class="label">Total:</div>
+            <div class="amount price total"></div>
+        </div>
+    </div>
+</template>
+
+<script src="./main.js"></script>
+</body>
+
+</html>
