@@ -128,3 +128,7 @@ h2 {
 .cards__item--e-commerce .cards__item-image-container {
     background-image: url('./images/2_e-commerce.png');
 }
+
+.cards__item--piano .cards__item-image-container {
+    background-image: url('./images/3_piano.png');
+}
