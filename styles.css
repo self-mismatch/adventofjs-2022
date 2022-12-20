@@ -124,3 +124,7 @@ h2 {
 .cards__item--pomodoro .cards__item-image-container {
     background-image: url('./images/1_pomodoro.png');
 }
+
+.cards__item--e-commerce .cards__item-image-container {
+    background-image: url('./images/2_e-commerce.png');
+}
