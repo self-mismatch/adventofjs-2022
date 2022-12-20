@@ -132,3 +132,7 @@ h2 {
 .cards__item--piano .cards__item-image-container {
     background-image: url('./images/3_piano.png');
 }
+
+.cards__item--keyboard .cards__item-image-container {
+    background-image: url('./images/4_keyboard.png');
+}
