@@ -136,3 +136,7 @@ h2 {
 .cards__item--keyboard .cards__item-image-container {
     background-image: url('./images/4_keyboard.png');
 }
+
+.cards__item--podcast .cards__item-image-container {
+    background-image: url('./images/5_podcast.png');
+}
