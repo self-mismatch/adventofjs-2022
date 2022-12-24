@@ -140,3 +140,7 @@ h2 {
 .cards__item--podcast .cards__item-image-container {
     background-image: url('./images/5_podcast.png');
 }
+
+.cards__item--range-slider .cards__item-image-container {
+    background-image: url('./images/6_range-slider.png');
+}
