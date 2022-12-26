@@ -144,3 +144,7 @@ h2 {
 .cards__item--range-slider .cards__item-image-container {
     background-image: url('./images/6_range-slider.png');
 }
+
+.cards__item--tip-calculator .cards__item-image-container {
+    background-image: url('./images/7_tip-calculator.png');
+}
