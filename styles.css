@@ -148,3 +148,7 @@ h2 {
 .cards__item--tip-calculator .cards__item-image-container {
     background-image: url('./images/7_tip-calculator.png');
 }
+
+.cards__item--weather-forecast .cards__item-image-container {
+    background-image: url('./images/8_weather-forecast.png');
+}
