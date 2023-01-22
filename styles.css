@@ -160,3 +160,7 @@ h2 {
 .cards__item--code-verifier .cards__item-image-container {
   background-image: url('./images/10_code-verifier.png');
 }
+
+.cards__item--faq .cards__item-image-container {
+  background-image: url('./images/11_faq.png');
+}
