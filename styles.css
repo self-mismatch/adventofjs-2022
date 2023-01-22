@@ -164,3 +164,7 @@ h2 {
 .cards__item--faq .cards__item-image-container {
   background-image: url('./images/11_faq.png');
 }
+
+.cards__item--rock-paper-scissors .cards__item-image-container {
+  background-image: url('./images/12_rock-paper-scissors.png');
+}
