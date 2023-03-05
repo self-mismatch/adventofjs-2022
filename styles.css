@@ -176,3 +176,7 @@ h2 {
 .cards__item--calendar .cards__item-image-container {
   background-image: url('./images/14_calendar.png');
 }
+
+.cards__item--youtube-video-gallery .cards__item-image-container {
+  background-image: url('./images/15_youtube-video-gallery.png');
+}
