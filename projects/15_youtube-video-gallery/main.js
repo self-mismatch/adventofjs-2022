@@ -765,7 +765,6 @@ function getGalleryItem(video) {
 }
 
 function getVideoElement(video) {
-  console.log(video);
   const videoElement = videoTemplate.content.cloneNode(true);
 
   const iframe = videoElement.querySelector('iframe');
