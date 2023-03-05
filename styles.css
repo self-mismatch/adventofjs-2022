@@ -168,3 +168,7 @@ h2 {
 .cards__item--rock-paper-scissors .cards__item-image-container {
   background-image: url('./images/12_rock-paper-scissors.png');
 }
+
+.cards__item--custom-modal .cards__item-image-container {
+  background-image: url('./images/13_custom-modal.png');
+}
