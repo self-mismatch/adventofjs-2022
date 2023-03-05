@@ -172,3 +172,7 @@ h2 {
 .cards__item--custom-modal .cards__item-image-container {
   background-image: url('./images/13_custom-modal.png');
 }
+
+.cards__item--calendar .cards__item-image-container {
+  background-image: url('./images/14_calendar.png');
+}
