@@ -180,3 +180,7 @@ h2 {
 .cards__item--youtube-video-gallery .cards__item-image-container {
   background-image: url('./images/15_youtube-video-gallery.png');
 }
+
+.cards__item--star-rating .cards__item-image-container {
+  background-image: url('./images/16_star-rating.png');
+}
