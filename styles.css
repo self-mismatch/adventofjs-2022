@@ -184,3 +184,7 @@ h2 {
 .cards__item--star-rating .cards__item-image-container {
   background-image: url('./images/16_star-rating.png');
 }
+
+.cards__item--table-of-contents .cards__item-image-container {
+  background-image: url('./images/17_table-of-contents.png');
+}
