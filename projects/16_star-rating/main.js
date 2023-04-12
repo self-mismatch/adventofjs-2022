@@ -9,44 +9,44 @@ let currentRating = null;
 init();
 
 function init() {
-  starRating.addEventListener('mouseover', onStarRatingMouseOver);
-  starRating.addEventListener('mouseout', onStarRatingMouseOut);
-  starRating.addEventListener('click', onStarRatingClick);
+    starRating.addEventListener('mouseover', onStarRatingMouseOver);
+    starRating.addEventListener('mouseout', onStarRatingMouseOut);
+    starRating.addEventListener('click', onStarRatingClick);
 }
 
 function setRating(amount) {
-  lastHoverRating = amount;
+    lastHoverRating = amount;
 
-  for (let i = 0; i < amount; i++) {
-    stars[i].classList.add('star--active');
-  }
+    for (let i = 0; i < amount; i++) {
+        stars[i].classList.add('star--active');
+    }
 }
 
 function resetRating() {
-  stars.forEach((star) => {
-    star.classList.remove('star--active');
-  });
+    stars.forEach((star) => {
+        star.classList.remove('star--active');
+    });
 }
 
 function onStarRatingMouseOver(event) {
-  const star = event.target.closest('a');
+    const star = event.target.closest('a');
 
-  if (!star) {
-    return;
-  }
+    if (!star) {
+        return;
+    }
 
-  resetRating();
-  setRating(star.dataset.position);
+    resetRating();
+    setRating(star.dataset.position);
 }
 
 function onStarRatingMouseOut() {
-  resetRating();
+    resetRating();
 
-  if (currentRating) {
-    setRating(currentRating);
-  }
+    if (currentRating) {
+        setRating(currentRating);
+    }
 }
 
 function onStarRatingClick() {
-  currentRating = lastHoverRating;
+    currentRating = lastHoverRating;
 }

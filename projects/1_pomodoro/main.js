@@ -6,9 +6,9 @@ const UPDATE_INTERVAL = 1000;
 const PERCENT_COEFFICIENT = 100;
 
 const TimerState = {
-  Editing: 'editing',
-  Running: 'running',
-  Stopped: 'stopped',
+    Editing: 'editing',
+    Running: 'running',
+    Stopped: 'stopped',
 };
 
 const ring = document.querySelector('.ring');
@@ -31,124 +31,124 @@ let timeoutId = null;
 init();
 
 function init() {
-  initStyles();
+    initStyles();
 
-  mainButton.addEventListener('click', onMainButtonClick);
-  settingsButton.addEventListener('click', onSettingsButtonClick);
+    mainButton.addEventListener('click', onMainButtonClick);
+    settingsButton.addEventListener('click', onSettingsButtonClick);
 }
 
 function initStyles() {
-  ring.style.transform = 'rotate(-90deg)';
-  circle.style.strokeDasharray = `${circleCircumference} ${circleCircumference}`;
-  circle.style.strokeDashoffset = `${circleCircumference} ${circleCircumference}`;
+    ring.style.transform = 'rotate(-90deg)';
+    circle.style.strokeDasharray = `${circleCircumference} ${circleCircumference}`;
+    circle.style.strokeDashoffset = `${circleCircumference} ${circleCircumference}`;
 }
 
 function getInitialTime() {
-  return (Number(minutesInput.value ?? 0) * SECONDS_IN_MINUTE + Number(secondsInput.value ?? 0)) * MILLISECONDS_IN_SECOND;
+    return (Number(minutesInput.value ?? 0) * SECONDS_IN_MINUTE + Number(secondsInput.value ?? 0)) * MILLISECONDS_IN_SECOND;
 }
 
 function startTimer() {
-  timerState = TimerState.Running;
-  initialTime = getInitialTime();
-  currentTime = initialTime;
+    timerState = TimerState.Running;
+    initialTime = getInitialTime();
+    currentTime = initialTime;
 
-  intervalId = setInterval(() => {
-    updateTimer();
-  }, UPDATE_INTERVAL);
+    intervalId = setInterval(() => {
+        updateTimer();
+    }, UPDATE_INTERVAL);
 
-  timeoutId = setTimeout(() => {
-    stopTimer();
+    timeoutId = setTimeout(() => {
+        stopTimer();
 
-    alert('Timer is over');
-  }, initialTime);
+        alert('Timer is over');
+    }, initialTime);
 
-  mainButton.textContent = 'Stop';
-  settingsButton.disabled = true;
-  minutesInput.disabled = true;
-  secondsInput.disabled = true;
+    mainButton.textContent = 'Stop';
+    settingsButton.disabled = true;
+    minutesInput.disabled = true;
+    secondsInput.disabled = true;
 }
 
 function stopTimer() {
-  timerState = TimerState.Stopped;
+    timerState = TimerState.Stopped;
 
-  clearInterval(intervalId);
-  clearTimeout(timeoutId);
+    clearInterval(intervalId);
+    clearTimeout(timeoutId);
 
-  intervalId = null;
-  timeoutId = null;
-  currentTime = initialTime;
+    intervalId = null;
+    timeoutId = null;
+    currentTime = initialTime;
 
-  updateInputs();
-  updateStyles();
+    updateInputs();
+    updateStyles();
 
-  mainButton.textContent = 'Start';
-  settingsButton.disabled = false;
+    mainButton.textContent = 'Start';
+    settingsButton.disabled = false;
 }
 
 function updateTimer() {
-  currentTime -= MILLISECONDS_IN_SECOND;
+    currentTime -= MILLISECONDS_IN_SECOND;
 
-  updateInputs();
-  updateStyles();
+    updateInputs();
+    updateStyles();
 }
 
 function updateInputs() {
-  const [minutes, seconds] = getFormattedTime();
+    const [minutes, seconds] = getFormattedTime();
 
-  minutesInput.value = minutes;
-  secondsInput.value = seconds;
+    minutesInput.value = minutes;
+    secondsInput.value = seconds;
 }
 
 function updateStyles() {
-  const percent = Math.round(currentTime / initialTime * PERCENT_COEFFICIENT);
+    const percent = Math.round(currentTime / initialTime * PERCENT_COEFFICIENT);
 
-  circle.style.strokeDashoffset = (circleCircumference - percent / PERCENT_COEFFICIENT * circleCircumference).toString();
+    circle.style.strokeDashoffset = (circleCircumference - percent / PERCENT_COEFFICIENT * circleCircumference).toString();
 }
 
 function toggleEditState() {
-  if (timerState === TimerState.Editing) {
-    timerState = TimerState.Stopped;
+    if (timerState === TimerState.Editing) {
+        timerState = TimerState.Stopped;
 
-    minutesInput.disabled = true;
-    secondsInput.disabled = true;
-  } else {
-    timerState = TimerState.Editing;
+        minutesInput.disabled = true;
+        secondsInput.disabled = true;
+    } else {
+        timerState = TimerState.Editing;
 
-    minutesInput.disabled = false;
-    secondsInput.disabled = false;
-  }
+        minutesInput.disabled = false;
+        secondsInput.disabled = false;
+    }
 }
 
 function getFormattedTime() {
-  const currentTimeInSeconds = currentTime / MILLISECONDS_IN_SECOND;
-  let minutes = (Math.floor(currentTimeInSeconds / SECONDS_IN_MINUTE)).toString();
-  let seconds = (currentTimeInSeconds % SECONDS_IN_MINUTE).toString();
+    const currentTimeInSeconds = currentTime / MILLISECONDS_IN_SECOND;
+    let minutes = (Math.floor(currentTimeInSeconds / SECONDS_IN_MINUTE)).toString();
+    let seconds = (currentTimeInSeconds % SECONDS_IN_MINUTE).toString();
 
-  if (minutes.length === 1) {
-    minutes = `0${minutes}`;
-  }
+    if (minutes.length === 1) {
+        minutes = `0${minutes}`;
+    }
 
-  if (seconds.length === 1) {
-    seconds = `0${seconds}`;
-  }
+    if (seconds.length === 1) {
+        seconds = `0${seconds}`;
+    }
 
-  return [minutes, seconds];
+    return [minutes, seconds];
 }
 
 function onMainButtonClick() {
-  switch (timerState) {
-    case TimerState.Running:
-      stopTimer();
+    switch (timerState) {
+        case TimerState.Running:
+            stopTimer();
 
-      break;
-    default:
-      startTimer();
+            break;
+        default:
+            startTimer();
 
-      break;
-  }
+            break;
+    }
 }
 
 function onSettingsButtonClick() {
-  toggleEditState();
+    toggleEditState();
 }
 

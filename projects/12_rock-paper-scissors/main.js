@@ -7,29 +7,29 @@ const list = document.querySelector('ul');
 init();
 
 function init() {
-  list.addEventListener('click', onListClick);
+    list.addEventListener('click', onListClick);
 }
 
 function getRandomPick() {
-  return PICKS[getRandomNumber(0, PICKS.length - 1)];
+    return PICKS[getRandomNumber(0, PICKS.length - 1)];
 }
 
 function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function onListClick(evt) {
-  const button = evt.target.closest('button');
+    const button = evt.target.closest('button');
 
-  if (!button) {
-    return;
-  }
+    if (!button) {
+        return;
+    }
 
-  const pick = button.dataset.pick;
-  const url = new URL('./winner.html', window.location.href);
+    const pick = button.dataset.pick;
+    const url = new URL('./winner.html', window.location.href);
 
-  url.searchParams.append('userPick', pick);
-  url.searchParams.append('computerPick', getRandomPick());
+    url.searchParams.append('userPick', pick);
+    url.searchParams.append('computerPick', getRandomPick());
 
-  window.open(url, '_self');
+    window.open(url, '_self');
 }

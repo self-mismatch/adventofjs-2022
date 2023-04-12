@@ -37,7 +37,7 @@ const mockWeatherForecast = [
         precipitation: 'Snowy',
         precipitationPercent: 100,
         temperature: {
-            max: 41,    
+            max: 41,
             min: 2,
         },
     },
@@ -146,7 +146,7 @@ function renderWeatherForecast() {
 
 function createWeatherForecastDay(dayForecast) {
     const day = dayTemplate.content.cloneNode(true);
-    
+
     const dayOfWeek = day.querySelector('.day-of-week');
     const dayOfMonth = day.querySelector('.date');
     const bar = day.querySelector('.bar');
@@ -171,7 +171,7 @@ function createWeatherImage(precipitation) {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
 
-    const { width, height, viewBox } = WeatherImageSize[precipitation];
+    const {width, height, viewBox} = WeatherImageSize[precipitation];
 
     svg.setAttribute('role', 'img');
     svg.setAttribute('width', width);

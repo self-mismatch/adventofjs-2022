@@ -7,57 +7,57 @@ const submitButton = form.querySelector('button');
 init();
 
 function init() {
-  form.addEventListener('input', onFormInput);
-  form.addEventListener('paste', onFormPaste);
+    form.addEventListener('input', onFormInput);
+    form.addEventListener('paste', onFormPaste);
 }
 
 function setNextFocus(currentInputName) {
-  const [prefix, currentInputPosition] = currentInputName.split('_');
-  const nextInputName = `${prefix}_${Number(currentInputPosition) + 1}`;
-  const nextInput = form.querySelector(`input[name="${nextInputName}"]`);
+    const [prefix, currentInputPosition] = currentInputName.split('_');
+    const nextInputName = `${prefix}_${Number(currentInputPosition) + 1}`;
+    const nextInput = form.querySelector(`input[name="${nextInputName}"]`);
 
-  if (!nextInput) {
-    submitButton.focus();
+    if (!nextInput) {
+        submitButton.focus();
 
-    return;
-  }
+        return;
+    }
 
-  nextInput.focus();
+    nextInput.focus();
 }
 
 function setCopiedCode(code) {
-  const codeNumbers = code.split('');
-  console.log(codeNumbers);
+    const codeNumbers = code.split('');
+    console.log(codeNumbers);
 
-  codeNumbers.forEach((codeNumber, index) => {
-    inputs[index].value = codeNumber;
-  });
+    codeNumbers.forEach((codeNumber, index) => {
+        inputs[index].value = codeNumber;
+    });
 
-  if (codeNumbers.length < 4) {
-    return;
-  }
+    if (codeNumbers.length < 4) {
+        return;
+    }
 
-  submitButton.focus();
+    submitButton.focus();
 }
 
 function onFormInput(evt) {
-  const input = evt.target;
+    const input = evt.target;
 
-  if (!input.value) {
-    return;
-  }
+    if (!input.value) {
+        return;
+    }
 
-  setNextFocus(evt.target.name);
+    setNextFocus(evt.target.name);
 }
 
 function onFormPaste(evt) {
-  evt.preventDefault();
+    evt.preventDefault();
 
-  const code = evt.clipboardData.getData('Text');
+    const code = evt.clipboardData.getData('Text');
 
-  if (isNaN(Number(code))) {
-    return;
-  }
+    if (isNaN(Number(code))) {
+        return;
+    }
 
-  setCopiedCode(code);
+    setCopiedCode(code);
 }

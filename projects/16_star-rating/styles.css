@@ -1,29 +1,29 @@
 body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 100vw;
-  min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .star-rating {
-  display: flex;
+    display: flex;
 }
 
 .star {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
 .star svg {
-  stroke: #757575;
-  stroke-width: 10px;
+    stroke: #757575;
+    stroke-width: 10px;
 }
 
 .star--active svg {
-  stroke-width: 0;
-  fill: #ffd200;
+    stroke-width: 0;
+    fill: #ffd200;
 }
 
 /* .star-1 .star-1 svg,

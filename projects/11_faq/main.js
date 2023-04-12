@@ -5,15 +5,15 @@ const list = document.querySelector('ul');
 init();
 
 function init() {
-  list.addEventListener('click', onListClick);
+    list.addEventListener('click', onListClick);
 }
 
 function onListClick(evt) {
-  const item = evt.target.closest('li');
+    const item = evt.target.closest('li');
 
-  if (!item) {
-    return;
-  }
+    if (!item) {
+        return;
+    }
 
-  item.classList.toggle('expand');
+    item.classList.toggle('expand');
 }
