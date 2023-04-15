@@ -188,3 +188,7 @@ h2 {
 .cards__item--table-of-contents .cards__item-image-container {
     background-image: url('./images/17_table-of-contents.png');
 }
+
+.cards__item--password-generator .cards__item-image-container {
+    background-image: url('./images/18_password-generator.png');
+}
