@@ -189,3 +189,7 @@ h2 a {
 .cards__item--signup-form .cards__item-image-container {
     background-image: url('./images/19_signup-form.png');
 }
+
+.cards__item--tab .cards__item-image-container {
+    background-image: url('./images/20_tab.png');
+}
