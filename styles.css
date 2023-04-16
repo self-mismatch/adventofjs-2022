@@ -192,3 +192,7 @@ h2 {
 .cards__item--password-generator .cards__item-image-container {
     background-image: url('./images/18_password-generator.png');
 }
+
+.cards__item--signup-form .cards__item-image-container {
+    background-image: url('./images/19_signup-form.png');
+}
