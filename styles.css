@@ -1,3 +1,8 @@
+:root {
+    --primary: #234E70;
+    --secondary: #FBF8BE;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -12,18 +17,18 @@ body {
     margin: 0;
 
     font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-    color: rgb(0, 107, 108);
+    color: var(--primary);
 
-    background-color: rgb(218, 255, 246);
+    background-color: #FFFFFF;
 }
 
 a {
-    color: #1a4c92;
+    color: #408bc2;
 }
 
 .container {
     margin: 0 auto;
-    padding: 120px 64px;
+    padding: 64px;
 }
 
 h1 {
@@ -35,12 +40,16 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 120px;
+    margin: 0 0 64px;
 
     font-size: 24px;
     line-height: 1.25;
     font-weight: 400;
     text-align: center;
+}
+
+h2 a {
+    font-weight: 700;
 }
 
 .cards {
@@ -55,35 +64,19 @@ h2 {
 }
 
 .cards__item {
-    position: relative;
-
     display: flex;
     flex-direction: column;
     width: 240px;
     height: 320px;
 
+    font-weight: 400;
     text-decoration: none;
 
     border-radius: 8px;
-    background-color: rgb(0, 107, 108);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--primary);
 
-    transition: transform 400ms;
-    counter-increment: inst;
-}
-
-.cards__item::before {
-    content: counter(inst);
-
-    position: absolute;
-    z-index: 10;
-    top: -50px;
-    left: -10px;
-
-    font-size: 80px;
-    line-height: 1.25;
-    font-weight: 700;
-    text-shadow: 2px 2px 6px #000;
-    color: rgb(0, 107, 108);
+    transition-duration: 400ms;
 }
 
 .cards__item:hover {
@@ -114,7 +107,7 @@ h2 {
     font-size: 20px;
     line-height: 1.25;
     text-align: center;
-    color: #fff;
+    color: #FFFFFF;
 
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
