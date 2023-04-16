@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 - Tabs || Advent of JavaScript</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <aside>
+        <a href="http://compressed.fm" target="_blank"><img src="./images/logo.svg" alt="Compressed.fm"/></a>
+
+        <ul class="tab-list"></ul>
+    </aside>
+
+    <main class="content"></main>
+</div>
+
+<template id="tab-item">
+    <li class="tab-item">
+        <button>
+            <span class="number"></span>
+            <span class="title"></span>
+        </button>
+    </li>
+</template>
+
+<template id="tab-content">
+    <div class="cover">
+        <img class="image"/>
+    </div>
+    <div class="content">
+        <h2 class="title"></h2>
+        <p class="description"></p>
+        <a class="more">More</a>
+    </div>
+</template>
+
+<script src="main.js"></script>
+</body>
+</html>
