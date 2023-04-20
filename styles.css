@@ -197,3 +197,7 @@ h2 a {
 .cards__item--simplified-budget .cards__item-image-container {
     background-image: url('./images/21_simplified-budget.png');
 }
+
+.cards__item--card-form .cards__item-image-container {
+    background-image: url('./images/22_card-form.png');
+}
