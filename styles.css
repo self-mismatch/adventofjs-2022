@@ -193,3 +193,7 @@ h2 a {
 .cards__item--tab .cards__item-image-container {
     background-image: url('./images/20_tab.png');
 }
+
+.cards__item--simplified-budget .cards__item-image-container {
+    background-image: url('./images/21_simplified-budget.png');
+}
