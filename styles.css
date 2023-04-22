@@ -205,3 +205,7 @@ h2 a {
 .cards__item--toaster .cards__item-image-container {
     background-image: url('./images/23_toaster.png');
 }
+
+.cards__item--table-of-data .cards__item-image-container {
+    background-image: url('./images/24_table-of-data.png');
+}
