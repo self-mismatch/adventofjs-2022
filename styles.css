@@ -201,3 +201,7 @@ h2 a {
 .cards__item--card-form .cards__item-image-container {
     background-image: url('./images/22_card-form.png');
 }
+
+.cards__item--toaster .cards__item-image-container {
+    background-image: url('./images/23_toaster.png');
+}
